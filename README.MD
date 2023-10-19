@@ -29,10 +29,9 @@ docker-compose up -d
 docker build -t quiz-service .
 docker run -d -p 8000:8000 --name quiz-container quiz-service
 
-Запустите приложение
-flask --app main.py run
 http://localhost:8000
 запрос:
 curl --location --request POST 'http://localhost:8000/questions/' --header 'Content-Type: application/json' --data-raw '{"questions_num": 1}'
+
 Автор
 Толпеев Иван
